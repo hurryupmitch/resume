@@ -135,9 +135,9 @@
     }
   }
   p {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
     color: black;
-    font-size: 1.125rem;
+    font-size: medium;
   }
   .centered {
     text-align: center;
@@ -177,7 +177,9 @@
   .topnav {
     position: fixed;
     width: 100%;
-    font-family: 'Amatic SC', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: medium;
     z-index: 1;
   }
   .topnav a {
@@ -208,3 +210,22 @@
       flex-wrap: wrap;
     }
   }
+
+  #HIDDENDIV {
+    display: none;
+}
+
+#table td {
+    padding: 1em;
+    border: none;
+    /* border: 1px solid red; */
+}
+
+
+#table.show tr > *:nth-child(2) {
+    display: block;
+}
+
+table {
+  margin: auto;
+}

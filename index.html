@@ -13,44 +13,48 @@
     <!--NAVIGATION BAR-->
     <nav id="navbar">
         <div class="topnav">
-            <a class="nav-link" href="http://www.rockoftheearth.com">Home</a>
+            <a href="http://www.rockoftheearth.com">Home</a>
         </div>
     </nav>
 </header>
 
 <body>
     <!--WELCOME SECTION-->
-    <div class="column centered welcome-section" id="welcome-section">
-        <div class="container container-3">
-            <h2>Please feel free to <a href="./assets/resume-1.pdf">download</a> my resume!</h2>
-            <iframe src="Assets/resume-1.pdf" height="900" width="675"></iframe>
-            <!-- PROJECTS SECTION -->
-            <!-- <div id="projects"> -->
-            <!--<h2 id="projects" class="projects">Simple Web Page Projects</h2>
-                <div class="row project-tile">
-                    <div class="column centered">
-    
-                    </div>
-                    <div class="column centered">
-                    
-                    </div>
-                    <div class="column centered">
-                    
-                    </div>
-                </div>
-                <div class="row project-tile">
-                    <div class="column centered">
-                        
-                    </div>
-                    <div class="column centered">
-                        
-                    </div>
-                    <div class="column centered">
-                        
-                    </div>
-                </div> -->
+    <div class="container centered">
+        <div id="passw">
+            <div>
+                <p>(The password is PASSWORD) <br />
+                    Enter the password to proceed:</p>
+            </div>
+            <div>
 
+                <input type="password" id="password"
+                    onkeydown="if (event.keyCode == 13) document.getElementById('button').click()" />
+                <!-- IMPORTANT! this part is so if you click enter, it works. -->
+            </div>
+
+
+            <div>
+                <br />
+                <input id="button" type="button" value="Login"
+                    onclick="if (document.getElementById('password').value == 'PASSWORD') { 
+    document.getElementById('table').classList.toggle('show');   document.getElementById('passw').style.display='none'; } 
+    else {  alert('Invalid Password! The password is literally PASSWORD'); password.setSelectionRange(0, password.value.length);   } " />
+            </div>
+            <!-- it will autoselect wrong input if wrong -->
+            <br /><br /><br />
         </div>
+        <table id="table" style="float:unset">
+            <tr>
+                <td></td>
+                <td id="HIDDENDIV">
+                    <h2>Please feel free to <a href="./assets/resume-1.pdf">download</a> my resume!</h2>
+                    <iframe src="Assets/resume-1.pdf" height="900" width="675"></iframe>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+
     </div>
     <script src="script.js"></script>
 
